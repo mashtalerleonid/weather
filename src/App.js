@@ -74,7 +74,9 @@ function App() {
 
       {status === "resolved" && <Weather weatherInfo={weatherInfo} />}
 
-      {status === "rejected" && <h1>{error.message}</h1>}
+      {status === "rejected" && (
+        <h1 style={{ position: "absolute", top: "150px" }}>{error.message}</h1>
+      )}
 
       <ToastContainer />
     </>
